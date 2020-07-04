@@ -1,1 +1,1 @@
-# goit-js-hw-01
+# Learn JavaScript mod-1
