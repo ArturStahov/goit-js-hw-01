@@ -4,7 +4,8 @@ let input;
 let total = 0;
 
 do {
-  input = +prompt("Введите число");
+  input = prompt("Введите число");
+  input = Number(input);
   if (isNaN(input)) {
     alert("Было введено не число, попробуйте еще раз");
   } else {
