@@ -1,7 +1,6 @@
 "use strict";
 
 let userCountry = prompt("укажите с какой вы страны?");
-let userCountryResult = userCountry.toLowerCase();
 
 const priceDeliveryChina = 100;
 const priceDeliveryChile = 250;
@@ -10,6 +9,7 @@ const priceDeliveryIndia = 80;
 const priceDeliveryJamaica = 120;
 
 if (userCountry !== null) {
+  let userCountryResult = userCountry.toLowerCase();
   switch (userCountryResult) {
     case "китай":
       alert(`Доставка в Китай будет стоить ${priceDeliveryChina} кредитов`);
