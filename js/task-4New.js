@@ -18,12 +18,15 @@ buttonRef.addEventListener("click", function() {
   event.preventDefault();
   let quantityPerDroid = textInputRef.value;
   let quantityPerDroidConvert = Number(quantityPerDroid);
+  let IsNaNinput = Number.isNaN(quantityPerDroidConvert);
 
   if (quantityPerDroidConvert !== 0 && quantityPerDroid !== null) {
     totalPrice = quantityPerDroidConvert * pricePerDroid;
 
     if (totalPrice > credits) {
       message = "Недостаточно средств на счету!";
+    } else if (IsNaNinput === true) {
+      message = "Вы ввели некоректное значение!";
     } else {
       credits -= totalPrice;
       message = `Вы купили ${quantityPerDroidConvert} дроидов, на счету осталось ${credits} кредитов.`;
